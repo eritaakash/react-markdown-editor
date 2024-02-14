@@ -1,0 +1,29 @@
+{
+  "name": "@eritaakash/react-markdown-editor",
+  "version": "1.0.0",
+  "description": "React Component to render markdown preview directly into text area.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eritaakash/react-markdown-editor.git"
+  },
+  "keywords": [
+    "react-component",
+    "markdown",
+    "react",
+    "markdown-preview"
+  ],
+  "author": "Aakash Sharma",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/eritaakash/react-markdown-editor/issues"
+  },
+  "homepage": "https://github.com/eritaakash/react-markdown-editor#readme",
+  "dependencies": {
+    "react": "^18",
+    "react-dom": "^18"
+  }
+}
