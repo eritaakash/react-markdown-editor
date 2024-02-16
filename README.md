@@ -1,5 +1,7 @@
+> # Wait! this package isn't available in npm yet! check it back in a moment or so.
+
 ## React Markdown Editor
-React Component to render markdown preview directly into text area.
+React Component to render markdown preview directly into text field.
 
 ```bash
 npm i @eritaakash/react-markdown-editor
@@ -14,6 +16,9 @@ It's currently very basic, and all it does is:
 - Format Bold, Italic and Underline texts as of now.
 - Provide option for customizable styling of the text editor container.
 - Provide option to customize the css of the preview container and markdown textarea.
+
+### Usage
+A basic setup file 
 
 ### Todo
 - Add support for various other markdown formatting methods such as List Item, Link & Image.
