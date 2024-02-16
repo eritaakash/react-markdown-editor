@@ -1,6 +1,6 @@
 {
   "name": "@eritaakash/react-markdown-editor",
-  "version": "2.0.3",
+  "version": "3.0.4",
   "description": "React Component to render markdown preview directly into text area.",
   "main": "src/index.jsx",
   "scripts": {
@@ -25,5 +25,11 @@
   "dependencies": {
     "react": "^18",
     "react-dom": "^18"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.23.9",
+    "@babel/preset-env": "^7.23.9",
+    "@babel/preset-react": "^7.23.3",
+    "babel-loader": "^9.1.3"
   }
 }
