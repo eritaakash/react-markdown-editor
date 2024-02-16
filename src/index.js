@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import styles from './editor-styling.module.css';
 
-const MarkdownEditor = ({ containerStyle = styles.containerStyle, text, setText }) => {
+const MarkdownEditor = ({ customStyle = styles.empty, text, setText }) => {
     const [output, setOutput] = useState('');
     const dimStyle = 'opacity:0.5; font-weight:200;';
 
@@ -59,7 +59,7 @@ const MarkdownEditor = ({ containerStyle = styles.containerStyle, text, setText 
     }, [text]);
 
     return (
-        <section className={containerStyle}>
+        <section className={`${styles.containerStyle} ${customStyle}`}>
             <textarea
                 value={text}
                 onChange={(e) => handleInputChange(e.target.value)}
