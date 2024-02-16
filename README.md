@@ -17,7 +17,7 @@ It's currently very basic, and all it does is:
 1. In a page file, 
 
 ```jsx
-import MarkdownEditor from "@eritaakash/";
+import MarkdownEditor from "@eritaakash/react-markdown-editor";
 import { useState } from 'react';
 
 export default function Home() {
