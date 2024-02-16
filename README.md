@@ -1,5 +1,3 @@
-> # Wait! this package isn't available in npm yet! check it back in a moment or so.
-
 ## React Markdown Editor
 React Component to render markdown preview directly into text field.
 
