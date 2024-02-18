@@ -1,6 +1,6 @@
 {
   "name": "@eritaakash/react-markdown-editor",
-  "version": "4.1.5",
+  "version": "4.2.5",
   "description": "React Component to render markdown preview directly into text area.",
   "main": "src/index.jsx",
   "scripts": {

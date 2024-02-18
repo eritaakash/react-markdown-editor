@@ -28,10 +28,6 @@ export default function Home() {
     <MarkdownEditor 
         text={text} 
         setText={setText} 
-
-        // Optional: provide styles for container.
-        // Pass an Object rather than className
-        customStyle={}
     />
   );
 };
@@ -42,22 +38,23 @@ export default function Home() {
 ![React Markdown Editor Preview](https://media.discordapp.net/attachments/695932896560676935/1207306730531201065/image.png?ex=65df2b03&is=65ccb603&hm=b0b031a60d5d55dea2cfd86bf0d4f8be855d19cd5a07e3358c1b9c6e6d412d96&=&format=webp&quality=lossless)
 
 ### Customization
-You can customie the styling of the component. default value for `customStyle` is this:
+You can customie the styling of the component through the linked css file, using the `.r-md_customStyle` selector. The default style is:
 
 ```css
-.customStyle {
+.r-md_customStyle {
     height: 30rem;
     width: 30rem;
     padding: 10px;
 }
 ```
-> ⚠ Always pass an object for customStyle, like `customStyle={{ height: '100%', width: '100%', ... }}`
 
 It is only useful to change dimension-related properties such as width, height, padding. For a deeper styling, `markdown-editor` class should be used in your `globals.css` file.
 
 #### Custom caret-color
 ```css
-/* global css file */
+/* global css file (Next.js) */
+/* Or, linked css file (React) */
+
 textarea.markdown-editor {
     caret-color: red;
 }
@@ -73,7 +70,9 @@ result:
 use `div.markdown-editor` to change the color of background or text
 
 ```css
-/* global css file */
+/* global css file (Next.js) */
+/* Or, linked css file (React) */
+
 div.markdown-editor {
     color: crimson;
     background-color: black;
@@ -88,6 +87,9 @@ result:
 apply the font to both `div` and `textarea`.
 
 ```css
+/* global css file (Next.js) */
+/* Or, linked css file (React) */
+
 textarea.markdown-editor {
     caret-color: grey;
 
@@ -119,10 +121,10 @@ result:
 > ![an issue with React Markdown Editor](https://media.discordapp.net/attachments/695932896560676935/1207950952666243092/image.png?ex=65e182fd&is=65cf0dfd&hm=c0015fd5222779449f97932245f7a524ab070a27404da827d013e461067598bb&=&format=webp&quality=lossless)
 
 
-I will try to figure out how would I solve this issue, soon.
+I will try to figure out how would I solve this issue.
 
 ### Todo
 - Add support for various other markdown formatting methods such as List Item, Link & Image.
 
 ### Contributing 
-Reporting of issues and pull requests for bug fixes or new suggestions are welcomed.
+Reporting of [issues](https://github.com/eritaakash/react-markdown-editor/issues) and [pull requests](https://github.com/eritaakash/react-markdown-editor/pulls) for bug fixes or new suggestions are welcomed.

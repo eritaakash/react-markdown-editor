@@ -1,45 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import './styles.css';
 
-const styles = {
-    containerStyle: {
-        position: 'relative',
-    },
-    previewContainerCommon: {
-        height: 'calc(100% - 24px)',
-        background: '#444',
-        width: '100%',
-        resize: 'none',
-        margin: 0,
-        padding: '12px',
-        border: 'none',
-        outline: 'none',
-        color: 'white',
-        position: 'absolute',
-        top: '50%',
-        left: '50%',
-        transform: 'translate(-50%, -50%)',
-        fontSize: '18px',
-        fontFamily: 'monospace',
-    },
-    previewDiv: {
-        background: '#333',
-        zIndex: 100,
-        color: 'white',
-    },
-    textArea: {
-        zIndex: 101,
-        color: 'transparent',
-        background: 'transparent',
-        caretColor: 'white',
-    },
-    customStyle: {
-        height: '30rem',
-        width: '30rem',
-        padding: '10px',
-    },
-};
-
-const MarkdownEditor = ({ customStyle = {}, text, setText }) => {
+const MarkdownEditor = ({ text, setText }) => {
     const [output, setOutput] = useState('');
     const dimStyle = 'opacity:0.5; font-weight:200;';
 
@@ -97,17 +59,17 @@ const MarkdownEditor = ({ customStyle = {}, text, setText }) => {
     }, [text]);
 
     return (
-        <section style={{ ...styles.containerStyle, ...styles.customStyle }}>
+        <section className={'r-md_containerStyle r-md_customStyle'}>
             <textarea
                 value={text}
                 onChange={(e) => handleInputChange(e.target.value)}
                 rows={10}
                 cols={50}
                 placeholder="Enter Markdown text..."
-                className={`${styles.previewContainerCommon} ${styles.textArea} markdown-editor`}
+                className={`r-md_previewContainerCommon r-md_textArea markdown-editor`}
             />
             <div dangerouslySetInnerHTML={{ __html: output }}
-                className={`${styles.previewContainerCommon} ${styles.previewDiv} markdown-editor`} />
+                className={`r-md_previewContainerCommon r-md_previewDiv markdown-editor`} />
         </section>
     );
 };
