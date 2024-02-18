@@ -29,7 +29,8 @@ export default function Home() {
         text={text} 
         setText={setText} 
 
-        { /* Optional containerStyle prop */}
+        // Optional: provide styles for container.
+        // Pass an Object rather than className
         customStyle={}
     />
   );
@@ -50,7 +51,7 @@ You can customie the styling of the component. default value for `customStyle` i
     padding: 10px;
 }
 ```
-> ⚠ Always pass a class as customStyle, like `customStyle={styles.editorStyles}`
+> ⚠ Always pass an object for customStyle, like `customStyle={{ height: '100%', width: '100%', ... }}`
 
 It is only useful to change dimension-related properties such as width, height, padding. For a deeper styling, `markdown-editor` class should be used in your `globals.css` file.
 

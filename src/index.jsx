@@ -1,7 +1,45 @@
-import { useState, useEffect } from 'react';
-import styles from './editor-styling.module.css';
+import React, { useState, useEffect } from 'react';
 
-const MarkdownEditor = ({ customStyle = styles.empty, text, setText }) => {
+const styles = {
+    containerStyle: {
+        position: 'relative',
+    },
+    previewContainerCommon: {
+        height: 'calc(100% - 24px)',
+        background: '#444',
+        width: '100%',
+        resize: 'none',
+        margin: 0,
+        padding: '12px',
+        border: 'none',
+        outline: 'none',
+        color: 'white',
+        position: 'absolute',
+        top: '50%',
+        left: '50%',
+        transform: 'translate(-50%, -50%)',
+        fontSize: '18px',
+        fontFamily: 'monospace',
+    },
+    previewDiv: {
+        background: '#333',
+        zIndex: 100,
+        color: 'white',
+    },
+    textArea: {
+        zIndex: 101,
+        color: 'transparent',
+        background: 'transparent',
+        caretColor: 'white',
+    },
+    customStyle: {
+        height: '30rem',
+        width: '30rem',
+        padding: '10px',
+    },
+};
+
+const MarkdownEditor = ({ customStyle = {}, text, setText }) => {
     const [output, setOutput] = useState('');
     const dimStyle = 'opacity:0.5; font-weight:200;';
 
@@ -59,7 +97,7 @@ const MarkdownEditor = ({ customStyle = styles.empty, text, setText }) => {
     }, [text]);
 
     return (
-        <section className={`${styles.containerStyle} ${customStyle}`}>
+        <section style={{ ...styles.containerStyle, ...styles.customStyle }}>
             <textarea
                 value={text}
                 onChange={(e) => handleInputChange(e.target.value)}
